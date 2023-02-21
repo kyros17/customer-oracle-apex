@@ -1,0 +1,127 @@
+prompt --application/shared_components/legacy_data_loads/eba_cust_customers
+begin
+--   Manifest
+--     EBA_CUST_CUSTOMERS
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>3211241
+,p_default_application_id=>100
+,p_default_id_offset=>2802439123200104
+,p_default_owner=>'TESTING'
+);
+wwv_flow_imp_shared.create_load_table(
+ p_id=>wwv_flow_imp.id(18136283599434975672)
+,p_name=>'Customers'
+,p_owner=>'#OWNER#'
+,p_table_name=>'EBA_CUST_CUSTOMERS'
+,p_unique_column_1=>'ID'
+,p_is_uk1_case_sensitive=>'N'
+,p_is_uk2_case_sensitive=>'N'
+,p_is_uk3_case_sensitive=>'N'
+,p_skip_validation=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136283810527975676)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'CATEGORY_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_CATEGORIES'
+,p_key_column=>'ID'
+,p_display_column=>'CATEGORY'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136285842042975679)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'COUNTRY_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_COUNTRIES'
+,p_key_column=>'ID'
+,p_display_column=>'COUNTRY_NAME'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136284295842975678)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'GEOGRAPHY_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_GEOGRAPHIES'
+,p_key_column=>'ID'
+,p_display_column=>'GEOGRAPHY_NAME'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(20222899917613259450)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_CUSTOMERS'
+,p_key_column=>'ID'
+,p_display_column=>'CUSTOMER_NAME'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136284607231975678)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'INDUSTRY_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_INDUSTRIES'
+,p_key_column=>'ID'
+,p_display_column=>'INDUSTRY_NAME'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136286611608975679)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'REFERENCE_PHASE_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_REF_PHASE'
+,p_key_column=>'ID'
+,p_display_column=>'STATUS'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136287031141975680)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'SALES_CHANNEL_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_SALES_CHANNEL'
+,p_key_column=>'ID'
+,p_display_column=>'CHANNEL'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136285046180975678)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'STATUS_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_STATUS'
+,p_key_column=>'ID'
+,p_display_column=>'STATUS'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136285497138975679)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'TYPE_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_STATUS'
+,p_key_column=>'ID'
+,p_display_column=>'STATUS'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp_shared.create_load_table_lookup(
+ p_id=>wwv_flow_imp.id(18136286247953975679)
+,p_load_table_id=>wwv_flow_imp.id(18136283599434975672)
+,p_load_column_name=>'USE_CASE_ID'
+,p_lookup_owner=>'#OWNER#'
+,p_lookup_table_name=>'EBA_CUST_USE_CASE'
+,p_key_column=>'ID'
+,p_display_column=>'USE_CASE'
+,p_insert_new_value=>'N'
+);
+wwv_flow_imp.component_end;
+end;
+/

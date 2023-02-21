@@ -1,0 +1,541 @@
+prompt --application/shared_components/navigation/lists/application_navigation
+begin
+--   Manifest
+--     LIST: Application Navigation
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.10.07'
+,p_release=>'22.2.0'
+,p_default_workspace_id=>3211241
+,p_default_application_id=>100
+,p_default_id_offset=>2802439123200104
+,p_default_owner=>'TESTING'
+);
+wwv_flow_imp_shared.create_list(
+ p_id=>wwv_flow_imp.id(14860645344895035627)
+,p_name=>'Application Navigation'
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14860645566207035632)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Customers [&CUSTOMERS.]'
+,p_list_item_link_target=>'f?p=&APP_ID.:59:&SESSION.::&DEBUG.:RP,RIR,CIR:::'
+,p_list_item_icon=>'fa-home'
+,p_list_text_10=>'2,13,47,53,54,55,56,50,52,64,51,66,68,67,37,25,69,7,10,13,1'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'2,10,13,25,47,50,51,52,59,67,92,149,150,131'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15772286949189467713)
+,p_list_item_display_sequence=>110
+,p_list_item_link_text=>'Categories'
+,p_list_item_link_target=>'f?p=&APP_ID.:32:&SESSION.::&DEBUG.:RP:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645566207035632)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15772292665995521823)
+,p_list_item_display_sequence=>120
+,p_list_item_link_text=>'Geographies'
+,p_list_item_link_target=>'f?p=&APP_ID.:85:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645566207035632)
+,p_required_patch=>wwv_flow_imp.id(14957444744682626195)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15773206896130625932)
+,p_list_item_display_sequence=>130
+,p_list_item_link_text=>'Referenceability'
+,p_list_item_link_target=>'f?p=&APP_ID.:86:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645566207035632)
+,p_required_patch=>wwv_flow_imp.id(14289627647497481110)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'86,91'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15871379850294981658)
+,p_list_item_display_sequence=>140
+,p_list_item_link_text=>'Products'
+,p_list_item_link_target=>'f?p=&APP_ID.:92:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645566207035632)
+,p_required_patch=>wwv_flow_imp.id(14957468029160891632)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(20248105120573709532)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Dashboard'
+,p_list_item_link_target=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-dial-gauge-chart'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(2567889086238698044)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Issues'
+,p_list_item_link_target=>'f?p=&APP_ID.:134:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-alert'
+,p_list_item_disp_cond_type=>'EXISTS'
+,p_list_item_disp_condition=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select null',
+'  from eba_cust_issues'))
+,p_required_patch=>wwv_flow_imp.id(2567496798360056917)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'134'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14860645713254035632)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>'Products [&PRODUCTS.]'
+,p_list_item_link_target=>'f?p=&APP_ID.:44:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-archive'
+,p_required_patch=>wwv_flow_imp.id(14957468029160891632)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'19,44'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14860645454361035631)
+,p_list_item_display_sequence=>150
+,p_list_item_link_text=>'Referencability'
+,p_list_item_link_target=>'f?p=&APP_ID.:100:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645713254035632)
+,p_list_text_10=>'33,31,59,15,76,100'
+,p_required_patch=>wwv_flow_imp.id(14289686064226555262)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'100,122'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(17779247571692288913)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'Partners'
+,p_list_item_link_target=>'f?p=&APP_ID.:115:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-thumbs-o-up'
+,p_required_patch=>wwv_flow_imp.id(1341305505994974383)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'115'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(17779416539148347772)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>'Competitors'
+,p_list_item_link_target=>'f?p=&APP_ID.:116:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-emoji-cringe'
+,p_security_scheme=>wwv_flow_imp.id(1361822573465721822)
+,p_required_patch=>wwv_flow_imp.id(1338153918090949701)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'116'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14860645618839035632)
+,p_list_item_display_sequence=>70
+,p_list_item_link_text=>'Contacts [&CONTACTS.]'
+,p_list_item_link_target=>'f?p=&APP_ID.:18:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-user'
+,p_required_patch=>wwv_flow_imp.id(14957475317033958083)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'18,20,60,61,62,63,38'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(18147034119941077158)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>'Activities [&ACTIVITIES.]'
+,p_list_item_link_target=>'f?p=&APP_ID.:55:&SESSION.::&DEBUG.:RP,RIR,55:::'
+,p_list_item_icon=>'fa-newspaper-o'
+,p_required_patch=>wwv_flow_imp.id(18140231356564824885)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'55,56,145'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14860645868366035632)
+,p_list_item_display_sequence=>90
+,p_list_item_link_text=>'Reports'
+,p_list_item_link_target=>'f?p=&APP_ID.:17:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-file-text-o'
+,p_required_patch=>wwv_flow_imp.id(14957542021231016539)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14866056746006229321)
+,p_list_item_display_sequence=>160
+,p_list_item_link_text=>'Customers'
+,p_list_item_link_target=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:RP:::'
+,p_list_item_disp_cond_type=>'NEVER'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645868366035632)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875551736858252975)
+,p_list_item_display_sequence=>170
+,p_list_item_link_text=>'Recent Updates'
+,p_list_item_link_target=>'f?p=&APP_ID.:29:&SESSION.::&DEBUG.:RP:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645868366035632)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875552661458262186)
+,p_list_item_display_sequence=>180
+,p_list_item_link_text=>'Activity Calendar'
+,p_list_item_link_target=>'f?p=&APP_ID.:22:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645868366035632)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875552835658265447)
+,p_list_item_display_sequence=>190
+,p_list_item_link_text=>'Tags'
+,p_list_item_link_target=>'f?p=&APP_ID.:40:&SESSION.::&DEBUG.:RP:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645868366035632)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(13544094348142433469)
+,p_list_item_display_sequence=>200
+,p_list_item_link_text=>'All Customers'
+,p_list_item_link_target=>'f?p=&APP_ID.:93:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645868366035632)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'93'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(2033455831670654679)
+,p_list_item_display_sequence=>210
+,p_list_item_link_text=>'Timeline'
+,p_list_item_link_target=>'f?p=&APP_ID.:124:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645868366035632)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14860645967960035632)
+,p_list_item_display_sequence=>100
+,p_list_item_link_text=>'Administration'
+,p_list_item_link_target=>'f?p=&APP_ID.:12:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-gear'
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875163017301137492)
+,p_list_item_display_sequence=>220
+,p_list_item_link_text=>'Access Control'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645967960035632)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875163755454143396)
+,p_list_item_display_sequence=>510
+,p_list_item_link_text=>'Settings'
+,p_list_item_link_target=>'f?p=&APP_ID.:35:&SESSION.::&DEBUG.:RP,35:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14875163017301137492)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'16,35'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875164368570146938)
+,p_list_item_display_sequence=>520
+,p_list_item_link_text=>'Users'
+,p_list_item_link_target=>'f?p=&APP_ID.:57:&SESSION.::&DEBUG.:RP,57:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14875163017301137492)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'57,58'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(1361786528339441130)
+,p_list_item_display_sequence=>530
+,p_list_item_link_text=>'ACL Features'
+,p_list_item_link_target=>'f?p=&APP_ID.:123:&SESSION.::&DEBUG.'
+,p_parent_list_item_id=>wwv_flow_imp.id(14875163017301137492)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'123'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875074832463094165)
+,p_list_item_display_sequence=>230
+,p_list_item_link_text=>'Configuration'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645967960035632)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875069884451056188)
+,p_list_item_display_sequence=>450
+,p_list_item_link_text=>'Build Options'
+,p_list_item_link_target=>'f?p=&APP_ID.:11:&SESSION.::&DEBUG.:RP,11:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14875074832463094165)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875076383369103736)
+,p_list_item_display_sequence=>470
+,p_list_item_link_text=>'Application Settings'
+,p_list_item_link_target=>'f?p=&APP_ID.:28:&SESSION.::&DEBUG.:RP,28:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14875074832463094165)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875081446331113670)
+,p_list_item_display_sequence=>480
+,p_list_item_link_text=>'Sample Data'
+,p_list_item_link_target=>'f?p=&APP_ID.:77:&SESSION.::&DEBUG.:RP,77:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14875074832463094165)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15236520299671892213)
+,p_list_item_display_sequence=>490
+,p_list_item_link_text=>'Theme Style'
+,p_list_item_link_target=>'f?p=&APP_ID.:70:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14875074832463094165)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'70'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(18148091917174191044)
+,p_list_item_display_sequence=>500
+,p_list_item_link_text=>'Upload Customers'
+,p_list_item_link_target=>'f?p=&APP_ID.:125:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14875074832463094165)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'125,126,127,128'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14863204400432576865)
+,p_list_item_display_sequence=>240
+,p_list_item_link_text=>'Code Tables'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645967960035632)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14863242302539579363)
+,p_list_item_display_sequence=>290
+,p_list_item_link_text=>'Categories'
+,p_list_item_link_target=>'f?p=&APP_ID.:3:&SESSION.::&DEBUG.:RP,3:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'3,4'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(17003172726213504813)
+,p_list_item_display_sequence=>300
+,p_list_item_link_text=>'Customer Statuses'
+,p_list_item_link_target=>'f?p=&APP_ID.:102:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(17140803701946890176)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'102,103'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875022490090998340)
+,p_list_item_display_sequence=>310
+,p_list_item_link_text=>'Customer Types'
+,p_list_item_link_target=>'f?p=&APP_ID.:5:&SESSION.::&DEBUG.:RP,5:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'5,6'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(17128642715808135172)
+,p_list_item_display_sequence=>320
+,p_list_item_link_text=>'Customer Use Cases'
+,p_list_item_link_target=>'f?p=&APP_ID.:104:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(17119002295930811954)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'104,105'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875022889513006676)
+,p_list_item_display_sequence=>330
+,p_list_item_link_text=>'Contact Types'
+,p_list_item_link_target=>'f?p=&APP_ID.:8:&SESSION.::&DEBUG.:RP,8:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(14957475317033958083)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'8,9'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15643120327367697582)
+,p_list_item_display_sequence=>340
+,p_list_item_link_text=>'Reference Types'
+,p_list_item_link_target=>'f?p=&APP_ID.:78:&SESSION.::&DEBUG.:RP,78:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'78,79'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(17764199260690321740)
+,p_list_item_display_sequence=>350
+,p_list_item_link_text=>'Product Families'
+,p_list_item_link_target=>'f?p=&APP_ID.:112:&SESSION.::&DEBUG.:RP,RIR,112:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(14957468029160891632)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'112'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875023832943009241)
+,p_list_item_display_sequence=>360
+,p_list_item_link_text=>'Products'
+,p_list_item_link_target=>'f?p=&APP_ID.:42:&SESSION.::&DEBUG.:RP,42:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(14957468029160891632)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'42,43'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14282428893435682561)
+,p_list_item_display_sequence=>370
+,p_list_item_link_text=>'Reference Statuses'
+,p_list_item_link_target=>'f?p=&APP_ID.:94:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(14289686064226555262)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875024229050011846)
+,p_list_item_display_sequence=>380
+,p_list_item_link_text=>'Geographies'
+,p_list_item_link_target=>'f?p=&APP_ID.:48:&SESSION.::&DEBUG.:RP,48:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(14957444744682626195)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'48,49'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(16931827326820420673)
+,p_list_item_display_sequence=>390
+,p_list_item_link_text=>'Countries'
+,p_list_item_link_target=>'f?p=&APP_ID.:98:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(16929060064647139815)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875025120408014733)
+,p_list_item_display_sequence=>400
+,p_list_item_link_text=>'Industries'
+,p_list_item_link_target=>'f?p=&APP_ID.:27:&SESSION.::&DEBUG.:RP,27:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'27,30'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(2567887311529664941)
+,p_list_item_display_sequence=>410
+,p_list_item_link_text=>'Issue Statuses'
+,p_list_item_link_target=>'f?p=&APP_ID.:132:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(2567496798360056917)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15845425142519065195)
+,p_list_item_display_sequence=>420
+,p_list_item_link_text=>'Reference Phases'
+,p_list_item_link_target=>'f?p=&APP_ID.:87:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(14289627647497481110)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15845436750896104558)
+,p_list_item_display_sequence=>430
+,p_list_item_link_text=>'Sales Channels'
+,p_list_item_link_target=>'f?p=&APP_ID.:89:&SESSION.::&DEBUG.:RP:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(18146706584599978019)
+,p_list_item_display_sequence=>440
+,p_list_item_link_text=>'Activity Types'
+,p_list_item_link_target=>'f?p=&APP_ID.:53:&SESSION.::&DEBUG.:RP,RIR,53:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14863204400432576865)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(18140231356564824885)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(18736759106892701368)
+,p_list_item_display_sequence=>250
+,p_list_item_link_text=>'Logging'
+,p_list_item_link_target=>'#'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645967960035632)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875073067229081892)
+,p_list_item_display_sequence=>540
+,p_list_item_link_text=>'Error Logs'
+,p_list_item_link_target=>'f?p=&APP_ID.:175:&SESSION.::&DEBUG.:RP,175:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(18736759106892701368)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(18736810347694775794)
+,p_list_item_display_sequence=>550
+,p_list_item_link_text=>'Email Logs'
+,p_list_item_link_target=>'f?p=&APP_ID.:121:&SESSION.::&DEBUG.:RP,121:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(18736759106892701368)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(18732613941585778553)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(18734917969807143812)
+,p_list_item_display_sequence=>260
+,p_list_item_link_text=>'Feedback'
+,p_list_item_link_target=>'f?p=&APP_ID.:119:&SESSION.::&DEBUG.:RP,119:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645967960035632)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_required_patch=>wwv_flow_imp.id(18732613941585778553)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875082900195125580)
+,p_list_item_display_sequence=>270
+,p_list_item_link_text=>'Notifications'
+,p_list_item_link_target=>'f?p=&APP_ID.:34:&SESSION.::&DEBUG.:RP,34:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645967960035632)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'34,36'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(14875084150244129102)
+,p_list_item_display_sequence=>280
+,p_list_item_link_text=>'Welcome Text'
+,p_list_item_link_target=>'f?p=&APP_ID.:14:&SESSION.::&DEBUG.:RP,14:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(14860645967960035632)
+,p_security_scheme=>wwv_flow_imp.id(15677026128353929641)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp.component_end;
+end;
+/
